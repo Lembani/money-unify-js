@@ -1,11 +1,11 @@
-const axios = require("axios");
-const qs = require("qs");
-const ApiError = require("./errors/ApiError");
-const TimeoutError = require("./errors/TimeoutError");
+import axios from "axios";
+import { stringify } from "qs";
+import ApiError from "./errors/ApiError";
+import TimeoutError from "./errors/TimeoutError";
 
 const requestPayment = async (muid, phone_number, amount) => {
   try {
-    const data = qs.stringify({
+    const data = stringify({
       muid: muid,
       phone_number: phone_number,
       amount: amount,
@@ -38,7 +38,7 @@ const requestPayment = async (muid, phone_number, amount) => {
 
 const verifyTransaction = async (muid, reference) => {
   try {
-    const data = qs.stringify({
+    const data = stringify({
       muid: muid,
       reference: reference,
     });
@@ -77,7 +77,7 @@ const sendMoney = async (
   transaction_details,
 ) => {
   try {
-    const data = qs.stringify({
+    const data = stringify({
       muid: muid,
       email: email,
       first_name: first_name,
@@ -146,7 +146,7 @@ const pollTransactionStatus = async (
   return new Promise(poll);
 };
 
-module.exports = {
+export default {
   requestPayment,
   verifyTransaction,
   sendMoney,

@@ -5,4 +5,4 @@ class TimeoutError extends Error {
   }
 }
 
-module.exports = TimeoutError;
+export default TimeoutError;
