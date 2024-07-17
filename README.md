@@ -17,7 +17,7 @@ MoneyUnify is a trusted API integration platform used by businesses all over the
 To install the MoneyUnify API Client, run:
 
 ```bash
-npm install moneyunify-api-client
+npm install money-unify-js
 ```
 
 ## License
