@@ -30,7 +30,7 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 
 ## Contact
 
-For support or inquiries, please contact [Money Unify Support](moneyunify.com).
+For support or inquiries, please contact [Money Unify Support](https://moneyunify.com).
 
 ## Author(s)
 
