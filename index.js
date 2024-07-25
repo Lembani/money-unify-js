@@ -159,7 +159,7 @@ const pollTransactionStatus = async (
   return new Promise(poll);
 };
 
-module.exports = {
+export default {
   requestPayment,
   verifyTransaction,
   sendMoney,
