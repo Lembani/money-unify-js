@@ -1,6 +1,6 @@
 {
   "name": "money-unify-js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "The MoneyUnify API Client is a versatile npm package designed to simplify mobile money payments for businesses. With this package, you can easily manage payments from multiple mobile money providers (MTN, Airtel, Zamtel) in Zambia. It provides a convenient and reliable way to request payments, verify transaction statuses, and disburse funds.",
   "main": "index.js",
   "scripts": {
