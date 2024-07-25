@@ -1,7 +1,22 @@
 import axios from "axios";
 import { stringify } from "qs";
 import ApiError from "./errors/ApiError";
-import TimeoutError from "./errors/TimeoutError";
+import TimeoutError from "./errors/TimeoutError"
+
+class ApiError extends Error {
+  constructor(message, status) {
+    super(message);
+    this.name = "ApiError";
+    this.status = status;
+  }
+}
+
+class TimeoutError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = "TimeoutError";
+  }
+}
 
 const requestPayment = async (muid, phone_number, amount) => {
   try {
@@ -151,4 +166,6 @@ export default {
   verifyTransaction,
   sendMoney,
   pollTransactionStatus,
+  ApiError,
+  TimeoutError,
 };
