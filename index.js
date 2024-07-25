@@ -1,7 +1,5 @@
 import axios from "axios";
 import { stringify } from "qs";
-import ApiError from "./errors/ApiError";
-import TimeoutError from "./errors/TimeoutError"
 
 class ApiError extends Error {
   constructor(message, status) {
@@ -161,7 +159,7 @@ const pollTransactionStatus = async (
   return new Promise(poll);
 };
 
-export default {
+module.exports = {
   requestPayment,
   verifyTransaction,
   sendMoney,
